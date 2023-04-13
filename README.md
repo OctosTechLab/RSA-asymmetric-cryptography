@@ -1,2 +1,31 @@
-# inIn
-inIn
+# RSA asymmetric cryptography
+-
+NL
+-
+Dit script kan worden gebruikt voor verschillende toepassingen waarbij asymmetrische cryptografie met RSA wordt gebruikt voor het genereren van sleutels, versleutelen en ontsleutelen van berichten, en berekenen van vingerafdrukken van openbare sleutels. Enkele mogelijke toepassingen zijn:
+
+Veilige communicatie: Je kunt dit script gebruiken om berichten veilig te versleutelen met de openbare sleutel van de ontvanger, zodat alleen de ontvanger met de bijbehorende geheime sleutel het bericht kan ontsleutelen en lezen. Dit kan handig zijn voor het beveiligen van vertrouwelijke communicatie, zoals het verzenden van gevoelige informatie via internet.
+
+Sleutelbeheer: Je kunt dit script gebruiken om sleutels te genereren en op te slaan in PEM-formaat bestanden. Deze sleutels kunnen worden gebruikt voor verschillende doeleinden, zoals authenticatie, digitale handtekeningen, en toegangscontrole. Het script biedt functies om zowel geheime sleutels als openbare sleutels te genereren en op te slaan.
+
+Beveiliging van gegevens: Je kunt dit script gebruiken om gevoelige gegevens te versleutelen met de openbare sleutel van een ontvanger voordat ze worden opgeslagen of verzonden. Alleen de ontvanger met de bijbehorende geheime sleutel kan de gegevens ontsleutelen en lezen, waardoor de gegevens beschermd blijven tegen ongeoorloofde toegang.
+
+Integriteitscontrole: Je kunt de functie footprint() gebruiken om een vingerafdruk (hash) van een openbare sleutel te berekenen en deze te gebruiken als een unieke identificatie van de sleutel. Hiermee kun je controleren of een ontvangen openbare sleutel overeenkomt met de verwachte vingerafdruk, om te zorgen voor de integriteit en authenticiteit van de sleutel.
+
+Let op: Het gebruik van cryptografie vereist zorgvuldige implementatie en beheer om effectief te zijn en beveiligingsrisico's te minimaliseren. Het is belangrijk om de documentatie en best practices van de gebruikte cryptografische bibliotheken en algoritmen te volgen, en rekening te houden met de specifieke beveiligingseisen van je toepassing.
+
+
+
+EN
+-
+This script can be used for various applications that use RSA asymmetric cryptography to generate keys, encrypt and decrypt messages, and compute public key fingerprints. Some possible applications are:
+
+Secure communication: You can use this script to securely encrypt messages with the recipient's public key, so that only the recipient with the corresponding secret key can decrypt and read the message. This can be useful for securing confidential communications, such as sending sensitive information over the Internet.
+
+Key management: You can use this script to generate and store keys in PEM format files. These keys can be used for various purposes, such as authentication, digital signatures, and access control. The script provides functions to generate and store both secret keys and public keys.
+
+Data security: You can use this script to encrypt sensitive data with a recipient's public key before it is stored or sent. Only the recipient with the associated secret key can decrypt and read the data, keeping the data safe from unauthorized access.
+
+Integrity check: You can use the footprint() function to compute a fingerprint (hash) of a public key and use it as a unique identifier for the key. This allows you to check whether a received public key matches the expected fingerprint to ensure the integrity and authenticity of the key.
+
+Note: The use of cryptography requires careful implementation and management to be effective and minimize security risks. It is important to follow the documentation and best practices of the cryptographic libraries and algorithms used, and take into account the specific security requirements of your application.
