@@ -50,9 +50,11 @@ To use this code, you must first make sure you have installed the necessary Pyth
 ### Installation
 
 NL
+-
 Zodra je de bibliotheek hebt geïnstalleerd, kun je de code in je Python-programma importeren en de verschillende functies gebruiken zoals nodig, afhankelijk van je use-case. Hier is een voorbeeld van hoe je de code kunt gebruiken:
 
 EN-US
+-
 Once you have installed the library, you can import the code into your Python program and use the various functions as needed depending on your use case. Here's an example of how to use the code:
 
 * Voorbeeld
