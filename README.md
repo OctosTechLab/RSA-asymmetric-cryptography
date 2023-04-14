@@ -29,3 +29,59 @@ Data security: You can use this script to encrypt sensitive data with a recipien
 Integrity check: You can use the footprint() function to compute a fingerprint (hash) of a public key and use it as a unique identifier for the key. This allows you to check whether a received public key matches the expected fingerprint to ensure the integrity and authenticity of the key.
 
 Note: The use of cryptography requires careful implementation and management to be effective and minimize security risks. It is important to follow the documentation and best practices of the cryptographic libraries and algorithms used, and take into account the specific security requirements of your application.
+-
+
+-
+
+
+## Install
+
+Om deze code te gebruiken, moet je eerst zorgen dat je de benodigde Python-bibliotheek, PyCryptoDome, hebt geïnstalleerd. Je kunt dit doen met behulp van een package manager zoals pip. Je kunt de PyCryptoDome-bibliotheek installeren met de volgende opdracht:
+
+
+* npm
+  ```
+  pip install pycryptodome
+  ```
+
+### Installation
+
+Zodra je de bibliotheek hebt geïnstalleerd, kun je de code in je Python-programma importeren en de verschillende functies gebruiken zoals nodig, afhankelijk van je use-case. Hier is een voorbeeld van hoe je de code kunt gebruiken:
+
+
+   ```py
+   # Importeer de benodigde modules
+from Crypto.PublicKey import RSA
+from Crypto.Cipher import PKCS1_OAEP
+from Crypto.Hash import SHA256
+from Crypto.Signature import pkcs1_15
+from Crypto.Random import get_random_bytes
+from Crypto.Util.Padding import pad, unpad
+
+# Genereer een nieuw sleutelpaar
+sk, pk = generate_key_pair()
+
+# Encrypteer een bericht met de publieke sleutel
+message = b"Dit is een geheim bericht."
+ciphertext = encrypt(pk, message)
+
+# Decrypteer het ciphertext met de private sleutel
+decrypted_message = decrypt(sk, ciphertext)
+print("Ontcijferd bericht: ", decrypted_message)
+
+# Genereer een digitale handtekening voor een bericht met de private sleutel
+signature = generate_signature(sk, message)
+
+# Verifieer de digitale handtekening met de publieke sleutel
+is_valid = verify_signature(pk, message, signature)
+if is_valid:
+    print("Handtekening is geldig.")
+else:
+    print("Handtekening is ongeldig.")
+
+# Genereer een vingerafdruk van de publieke sleutel
+fingerprint = generate_fingerprint(pk)
+print("Vingerafdruk van de publieke sleutel: ", fingerprint)
+   ```
+
+Let op: Het is belangrijk om te begrijpen dat cryptografie een complex veld is en dat het gebruik van deze code in een productieomgeving specifieke kennis en expertise vereist. Het implementeren van cryptografie op een veilige manier is essentieel om de vertrouwelijkheid en integriteit van gegevens te waarborgen. Het is raadzaam om deskundig advies in te winnen en de juiste beveiligingsmaatregelen te nemen bij het implementeren van cryptografie in echte toepassingen.
