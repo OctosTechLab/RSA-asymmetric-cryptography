@@ -29,17 +29,15 @@ Data security: You can use this script to encrypt sensitive data with a recipien
 Integrity check: You can use the footprint() function to compute a fingerprint (hash) of a public key and use it as a unique identifier for the key. This allows you to check whether a received public key matches the expected fingerprint to ensure the integrity and authenticity of the key.
 
 Note: The use of cryptography requires careful implementation and management to be effective and minimize security risks. It is important to follow the documentation and best practices of the cryptographic libraries and algorithms used, and take into account the specific security requirements of your application.
--
 
 -
-
 
 ## Install
 
 Om deze code te gebruiken, moet je eerst zorgen dat je de benodigde Python-bibliotheek, PyCryptoDome, hebt geïnstalleerd. Je kunt dit doen met behulp van een package manager zoals pip. Je kunt de PyCryptoDome-bibliotheek installeren met de volgende opdracht:
 
 
-* npm
+* Install
   ```
   pip install pycryptodome
   ```
@@ -49,6 +47,7 @@ Om deze code te gebruiken, moet je eerst zorgen dat je de benodigde Python-bibli
 Zodra je de bibliotheek hebt geïnstalleerd, kun je de code in je Python-programma importeren en de verschillende functies gebruiken zoals nodig, afhankelijk van je use-case. Hier is een voorbeeld van hoe je de code kunt gebruiken:
 
 
+* Voorbeeld
    ```py
    # Importeer de benodigde modules
 from Crypto.PublicKey import RSA
