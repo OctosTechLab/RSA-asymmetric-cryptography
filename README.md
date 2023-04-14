@@ -38,9 +38,9 @@ Om deze code te gebruiken, moet je eerst zorgen dat je de benodigde Python-bibli
 
 
 * Install
-```
-pip install pycryptodome
-```
+    ```
+    pip install pycryptodome
+    ```
 
 ### Installation
 
