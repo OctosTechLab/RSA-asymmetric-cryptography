@@ -59,38 +59,31 @@ Once you have installed the library, you can import the code into your Python pr
 
 * Voorbeeld
 ```py
-# Importeer de benodigde modules
-from Crypto.PublicKey import RSA
-from Crypto.Cipher import PKCS1_OAEP
-from Crypto.Hash import SHA256
-from Crypto.Signature import pkcs1_15
-from Crypto.Random import get_random_bytes
-from Crypto.Util.Padding import pad, unpad
+# Stap 1: Genereer een RSA-sleutelpaar
+sk_sender, pk_sender = generate_key_pair()
+sk_receiver, pk_receiver = generate_key_pair()
 
-# Genereer een nieuw sleutelpaar
-sk, pk = generate_key_pair()
+# Stap 2: Versleutel het bericht met de publieke sleutel van de ontvanger
+bericht = b"Dit is een geheim bericht."
+ciphertext = encrypt(pk_receiver, bericht)
 
-# Encrypteer een bericht met de publieke sleutel
-message = b"Dit is een geheim bericht."
-ciphertext = encrypt(pk, message)
+# Stap 3: Genereer een handtekening voor het bericht met de privésleutel van de verzender
+handtekening = generate_signature(sk_sender, bericht)
 
-# Decrypteer het ciphertext met de private sleutel
-decrypted_message = decrypt(sk, ciphertext)
-print("Ontcijferd bericht: ", decrypted_message)
-
-# Genereer een digitale handtekening voor een bericht met de private sleutel
-signature = generate_signature(sk, message)
-
-# Verifieer de digitale handtekening met de publieke sleutel
-is_valid = verify_signature(pk, message, signature)
-if is_valid:
-    print("Handtekening is geldig.")
+# Stap 4: Verifieer de handtekening met de publieke sleutel van de verzender
+is_geldig = verify_signature(pk_sender, bericht, handtekening)
+if is_geldig:
+    print("De handtekening is geldig.")
 else:
-    print("Handtekening is ongeldig.")
+    print("De handtekening is ongeldig.")
 
-# Genereer een vingerafdruk van de publieke sleutel
-fingerprint = generate_fingerprint(pk)
-print("Vingerafdruk van de publieke sleutel: ", fingerprint)
+# Stap 5: Genereer een vingerafdruk van de publieke sleutel van de ontvanger
+vingerafdruk = generate_fingerprint(pk_receiver)
+print("Vingerafdruk van de publieke sleutel van de ontvanger:", vingerafdruk)
+
+# Stap 6: Decrypteer het ciphertext met de privésleutel van de ontvanger
+ontcijfert_bericht = decrypt(sk_receiver, ciphertext)
+print("Ontcijferd bericht:", ontcijfert_bericht.decode())
 ```
 
 NL
