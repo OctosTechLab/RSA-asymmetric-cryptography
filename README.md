@@ -43,7 +43,7 @@ EN-US
 To use this code, you must first make sure you have installed the necessary Python library, PyCryptoDome. You can do this using a package manager such as pip. You can install the PyCryptoDome library with the following command:
 
 * Install
-    ```
+    ```shell
     pip install pycryptodome
     ```
 
