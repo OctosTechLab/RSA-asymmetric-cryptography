@@ -38,9 +38,9 @@ Om deze code te gebruiken, moet je eerst zorgen dat je de benodigde Python-bibli
 
 
 * Install
-  ```
-  pip install pycryptodome
-  ```
+```
+pip install pycryptodome
+```
 
 ### Installation
 
@@ -48,8 +48,8 @@ Zodra je de bibliotheek hebt geïnstalleerd, kun je de code in je Python-program
 
 
 * Voorbeeld
-   ```py
-   # Importeer de benodigde modules
+```py
+# Importeer de benodigde modules
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 from Crypto.Hash import SHA256
@@ -81,6 +81,6 @@ else:
 # Genereer een vingerafdruk van de publieke sleutel
 fingerprint = generate_fingerprint(pk)
 print("Vingerafdruk van de publieke sleutel: ", fingerprint)
-   ```
+```
 
 Let op: Het is belangrijk om te begrijpen dat cryptografie een complex veld is en dat het gebruik van deze code in een productieomgeving specifieke kennis en expertise vereist. Het implementeren van cryptografie op een veilige manier is essentieel om de vertrouwelijkheid en integriteit van gegevens te waarborgen. Het is raadzaam om deskundig advies in te winnen en de juiste beveiligingsmaatregelen te nemen bij het implementeren van cryptografie in echte toepassingen.
